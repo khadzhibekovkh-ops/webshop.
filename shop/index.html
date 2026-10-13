@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MODA — магазин одежды</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">MODA</a>
+      <nav class="nav">
+        <a href="#" class="nav__link">Каталог</a>
+        <a href="#" class="nav__link">О нас</a>
+        <a href="#" class="nav__link">Доставка</a>
+      </nav>
+      <button class="cart-btn" id="cartBtn">
+        🛒 Корзина <span class="cart-counter" id="cartCounter">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- БАННЕР -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero__title">Новая коллекция 2026</h1>
+      <p class="hero__subtitle">Стильная одежда на каждый день</p>
+    </div>
+  </section>
+
+  <!-- ФИЛЬТРЫ И ПОИСК -->
+  <section class="controls">
+    <div class="container controls__inner">
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-category="all">Все</button>
+        <button class="filter-btn" data-category="dresses">Платья</button>
+        <button class="filter-btn" data-category="shoes">Обувь</button>
+        <button class="filter-btn" data-category="outerwear">Верхняя одежда</button>
+        <button class="filter-btn" data-category="accessories">Аксессуары</button>
+      </div>
+      <input type="search" id="searchInput" class="search" placeholder="Поиск товара...">
+    </div>
+  </section>
+
+  <!-- КАТАЛОГ -->
+  <main class="container">
+    <section class="catalog" id="catalog"></section>
+  </main>
+
+  <!-- МОДАЛЬНОЕ ОКНО КОРЗИНЫ -->
+  <div class="modal" id="cartModal">
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose">×</button>
+      <h2 class="modal__title">Ваша корзина</h2>
+      <div class="cart-list" id="cartList"></div>
+      <div class="cart-total">
+        Итого: <span id="cartTotal">0</span> ₽
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+    </div>
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 MODA. Учебный проект.</p>
+    </div>
+  </footer>
+
+  <!-- СКРИПТЫ -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
